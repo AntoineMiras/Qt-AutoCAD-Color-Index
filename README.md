@@ -39,7 +39,7 @@ class color_picker(QDialog):
 if __name__ == "__main__":
     APP = QApplication(list(sys.argv[0]))
     APP.setStyle("fusion")
-    main = colorPicker()
+    main = color_picker()
     main.show()
     sys.exit(APP.exec_())
 ```
@@ -53,15 +53,15 @@ from PySide2.QtWidgets import QDialog, QApplication
 
 import sys
 
-class color_picker(QDialog):
+class ColorPicker(QDialog):
     def __init__(self):
-        super(color_picker, self).__init__()
+        super(ColorPicker, self).__init__()
         self.ui = QUiLoader.load("AcadColorIndexPicker.ui", self)
 
 if __name__ == "__main__":
     APP = QApplication(list(sys.argv[0]))
     APP.setStyle("fusion")
-    main = colorPicker()
+    main = color_picker()
     main.ui.show()
     sys.exit(APP.exec_())
 
@@ -78,7 +78,7 @@ For PyQt
 ```python
 ...
 
-import pyqt_colorPicker as acp
+import pyqt_aci_picker as acp
 
 #QMainWindow or QDialog, doesn't matter... 
 class MainWindow(QMainWindow): 
@@ -86,7 +86,7 @@ class MainWindow(QMainWindow):
     ...
     
     def select_color(self):
-        c_picker = acp.colorPicker()
+        c_picker = acp.ColorPicker()
         #1 is returned if the user press ok.
         #0 is returned if the user press cancel
         if c_picker.exec_() == 1:
@@ -103,7 +103,7 @@ For PySide:
 ```python
 ...
 
-import pyside_colorPicker as acp
+import pyside_aci_picker as acp
 
 #QMainWindow or QDialog, doesn't matter... 
 class MainWindow(QMainWindow): 
@@ -111,13 +111,13 @@ class MainWindow(QMainWindow):
     ...
     
     def select_color(self):
-        c_picker = acp.colorPicker()
+        c_picker = acp.ColorPicker()
         #1 is returned if the user press ok.
         #0 is returned if the user press cancel
-        if c_picker.ui.exec_() == 1:
+        if c_picker._ui.exec_() == 1:
            #the color picker will return the AutoCAD color Index alongside
            #the hex code of this color
-          index, color = c_picker.ui.lineEdit.text(), c_picker.color
+          index, color = c_picker._ui.lineEdit.text(), c_picker.color
 
 ...
 
