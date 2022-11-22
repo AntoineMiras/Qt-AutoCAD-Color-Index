@@ -623,7 +623,7 @@ background: #fff</string>
            <number>-1</number>
           </property>
           <property name="accessibleName">
-           <string>Blanc</string>
+           <string>White</string>
           </property>
           <property name="styleSheet">
            <string notr="true">QRadioButton::indicator {
