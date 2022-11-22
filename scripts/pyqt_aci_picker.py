@@ -123,5 +123,3 @@ if __name__ == "__main__":
     main = ColorPicker()
     main.show()
     sys.exit(APP.exec_())
-
-    
