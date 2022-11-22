@@ -49,7 +49,7 @@ from PyQt5.QtCore import pyqtSlot, Qt
 class colorPicker(QDialog):
     def __init__(self):
         super(colorPicker, self).__init__()
-        loadUi("acadColorPicker.ui", self)
+        loadUi("AcadColorIndexPicker.ui", self)
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)
         self.connect_btns()
         self.color = "White"
