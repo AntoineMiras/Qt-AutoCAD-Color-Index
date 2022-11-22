@@ -126,6 +126,15 @@ class MainWindow(QMainWindow):
 In addition, you also will able to find in this repository a file named "aci_color_dict.py".
 This file contains a python dictionnary with all of the 255 AutoCAD Colors Indexes assigned to their hex color Value.
 
+You can use it following this example:
+
+```python
+import aci_color_dict as aci
+
+print(aci.aci)
+
+```
+
 Enjoy!
 ## License
 
