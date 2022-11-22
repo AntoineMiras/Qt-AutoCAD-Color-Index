@@ -78,21 +78,23 @@ For PyQt
 ```python
 ...
 
-#import pyqt or pyside version, depending of your project!
 import pyqt_colorPicker as acp
-
-#import pyside_colorPicker as acp
 
 #QMainWindow or QDialog, doesn't matter... 
 class MainWindow(QMainWindow): 
-    c_picker = acp.colorPicker()
-    #1 is returned if the user press ok.
-    #0 is returned if the user press cancel
-    if c_picker.exec_() == 1:
-        #the color picker will return the AutoCAD color Index alongside
-        #the hex code of this color
-        index, color = c_picker.lineEdit.text(), c_picker.color
-        #index, color = c_picker.ui.lineEdit.text(), c_picker.color
+    
+    ...
+    
+    def select_color(self):
+        c_picker = acp.colorPicker()
+        #1 is returned if the user press ok.
+        #0 is returned if the user press cancel
+        if c_picker.exec_() == 1:
+            #the color picker will return the AutoCAD color Index alongside
+            #the hex code of this color
+            index, color = c_picker.lineEdit.text(), c_picker.color
+
+...
 
 ```
 
@@ -105,13 +107,20 @@ import pyside_colorPicker as acp
 
 #QMainWindow or QDialog, doesn't matter... 
 class MainWindow(QMainWindow): 
-    c_picker = acp.colorPicker()
-    #1 is returned if the user press ok.
-    #0 is returned if the user press cancel
-    if c_picker.ui.exec_() == 1:
-        #the color picker will return the AutoCAD color Index alongside
-        #the hex code of this color
-        index, color = c_picker.ui.lineEdit.text(), c_picker.color
+    
+    ...
+    
+    def select_color(self):
+        c_picker = acp.colorPicker()
+        #1 is returned if the user press ok.
+        #0 is returned if the user press cancel
+        if c_picker.ui.exec_() == 1:
+           #the color picker will return the AutoCAD color Index alongside
+           #the hex code of this color
+          index, color = c_picker.ui.lineEdit.text(), c_picker.color
+
+...
+
 ```
 
 Enjoy!
