@@ -65,7 +65,7 @@ class colorPicker(QDialog):
             self.previ.setStyleSheet("border: none; background: " + self.color)
             index_value = btn.accessibleName()
             self.indexValue.setText(index_value)
-            if index_value != "Blanc":
+            if index_value != "White":
                 r, v, b = hex2rgb(self.color)
                 self.red.setText(str(r))
                 self.green.setText(str(v))
