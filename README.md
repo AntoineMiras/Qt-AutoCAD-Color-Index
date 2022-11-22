@@ -69,11 +69,11 @@ if __name__ == "__main__":
 
 ```
 
-Other way, use one of the premade example.
-Two window are available, in function of if you use PyQt or PySide.
+Second case, use one of the premade aci_picker module.
+Two versions are available, in function of if you use PyQt or PySide.
 Import one one of them and implement it in your project like in the below example:
 
-For PyQt
+For PyQt:
 
 ```python
 ...
